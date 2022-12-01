@@ -1,0 +1,19 @@
+package doburuchenik;
+import java.util.Scanner;
+public class asdasd {
+	static double Area(double b1,
+            double b2,
+            double h)
+{
+return ((b1 + b2) / 2) * h;
+}
+	public static void main(String[] args) {
+	Scanner sc= new Scanner (System.in);
+		double osnova1 =sc.nextDouble(), osnova = sc.nextDouble(),
+                visochina = sc.nextDouble();
+ double area = Area(osnova1, osnova,
+                           visochina);
+ System.out.println("Area is: " + area);
+	}
+
+}
