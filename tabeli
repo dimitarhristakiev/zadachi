@@ -1,0 +1,27 @@
+package pog;
+import java.util.Scanner;
+public class asdasdasd {
+public static void s() {
+		
+		Scanner sc = new Scanner(System.in);
+		int c=sc.nextInt();int a=0;int br=0;
+		
+		for (int i = 1; i<=c; i++) {
+			a=i;
+			
+			while(a/10==0) {
+			int a1=a%10;
+				if (a1==2)br++;
+				else a1 = a1/10;
+			
+		}
+		}
+		
+		System.out.println("broi tabeli = "+br);
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+s();
+}
+}
