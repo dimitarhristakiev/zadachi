@@ -89,25 +89,25 @@ public class Division extends JFrame {
 		JButton btnNewButton = new JButton("\u041F\u0440\u0435\u0441\u043C\u0435\u0442\u043D\u0438");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				StringBuilder editText = new StringBuilder();
 				String chis=text.getText();
 				int n=Integer.parseInt(chis);
+				int[]arr=new int[n];
 				int p=1;
 				int s=0;
-				for (int i=1;i<=n;i++) {
-					if (i%7==0&&i!=0) {
-						p=p*i;
-						s=s+i;
-						String d=Integer.toString(i);
+				for (int i=1;i<=arr.length;i++) {
+					if (arr[i]%7==0&&arr[i]!=0) {
+						p=p*arr[i];
+						s=s+arr[i];
+						String d=Integer.toString(arr[i]);
+					
 						l1.setText(d);
-				}
-				}
+				
 				String pr=Integer.toString(p);
 				l3.setText(pr);
 				String sb=Integer.toString(s);
 				l2.setText(sb);
 			}
-		});
+		}}});
 		btnNewButton.setBounds(195, 259, 103, 23);
 		contentPane.add(btnNewButton);
 		
