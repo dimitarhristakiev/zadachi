@@ -1,0 +1,135 @@
+package yes;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Division extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField text;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Division frame = new Division();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Division() {
+		setTitle("\u0414\u0435\u043B\u0435\u043D\u0438\u0435 \u043D\u0430 7");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 551, 332);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("\u0412\u044A\u0432\u0435\u0434\u0438 \u0446\u044F\u043B\u043E \u0447\u0438\u0441\u043B\u043E:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblNewLabel.setBounds(28, 22, 165, 35);
+		contentPane.add(lblNewLabel);
+		
+		text = new JTextField();
+		text.setBounds(195, 23, 103, 30);
+		contentPane.add(text);
+		text.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("\u0427\u0438\u0441\u043B\u0430\u0442\u0430, \u0434\u0435\u043B\u044F\u0449\u0438 \u0441\u0435 \u043D\u0430 7 \u0431\u0435\u0437 \u043E\u0441\u0442\u0430\u0442\u044A\u043A \u0441\u0430:");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1.setBounds(38, 68, 249, 35);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("\u0421\u0443\u043C\u0430\u0442\u0430 \u043D\u0430 \u0447\u0438\u0441\u043B\u0430\u0442\u0430 \u0435:");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1.setBounds(38, 121, 249, 35);
+		contentPane.add(lblNewLabel_1_1);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("\u041F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u0435\u0442\u043E \u043D\u0430 \u0447\u0438\u0441\u043B\u0430\u0442\u0430 \u0435:");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1_1.setBounds(38, 190, 249, 35);
+		contentPane.add(lblNewLabel_1_1_1);
+		
+		JLabel l1 = new JLabel("");
+		l1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		l1.setBounds(297, 64, 172, 35);
+		contentPane.add(l1);
+		
+		JLabel l2 = new JLabel("");
+		l2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		l2.setBounds(297, 121, 172, 35);
+		contentPane.add(l2);
+		
+		JLabel l3 = new JLabel("");
+		l3.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		l3.setBounds(297, 190, 172, 35);
+		contentPane.add(l3);
+		
+		JButton btnNewButton = new JButton("\u041F\u0440\u0435\u0441\u043C\u0435\u0442\u043D\u0438");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				StringBuilder editText = new StringBuilder();
+				String chis=text.getText();
+				int n=Integer.parseInt(chis);
+				int p=1;
+				int s=0;
+				for (int i=1;i<=n;i++) {
+					if (i%7==0&&i!=0) {
+						p=p*i;
+						s=s+i;
+						String d=Integer.toString(i);
+						l1.setText(d);
+				}
+				}
+				String pr=Integer.toString(p);
+				l3.setText(pr);
+				String sb=Integer.toString(s);
+				l2.setText(sb);
+			}
+		});
+		btnNewButton.setBounds(195, 259, 103, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("\u0418\u0437\u0447\u0438\u0441\u0442\u0438");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				text.setText("");
+				l1.setText("");
+				l2.setText("");
+				l3.setText("");
+			}
+		});
+		btnNewButton_1.setBounds(308, 259, 103, 23);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_1_1 = new JButton("\u0418\u0437\u0445\u043E\u0434");
+		btnNewButton_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnNewButton_1_1.setBounds(422, 259, 103, 23);
+		contentPane.add(btnNewButton_1_1);
+	}
+}
