@@ -1,0 +1,147 @@
+package yes;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class prolet extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField t1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					prolet frame = new prolet();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public prolet() {
+		setTitle("\u041F\u0440\u043E\u043B\u0435\u0442\u043D\u0430 \u0437\u0430\u0433\u0430\u0434\u043A\u0430");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 786, 472);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(46, 139, 87));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel l1_1 = new JLabel("");
+		l1_1.setIcon(new ImageIcon("C:\\Users\\pc\\Documents\\111.jpg"));
+		l1_1.setBounds(10, 257, 170, 153);
+		contentPane.add(l1_1);
+		l1_1.setVisible(false);
+		
+		JLabel l2_1 = new JLabel("");
+		l2_1.setIcon(new ImageIcon("C:\\Users\\pc\\Documents\\11.jpg"));
+		l2_1.setBounds(203, 257, 170, 153);
+		contentPane.add(l2_1);
+		l2_1.setVisible(false);
+		
+		JLabel l3_1 = new JLabel("");
+		l3_1.setIcon(new ImageIcon("C:\\Users\\pc\\Documents\\1.jpg"));
+		l3_1.setBounds(400, 257, 170, 153);
+		contentPane.add(l3_1);
+		l3_1.setVisible(false);
+		
+		JLabel l4_1 = new JLabel("");
+		l4_1.setIcon(new ImageIcon("C:\\Users\\pc\\Documents\\22.jpg"));
+		l4_1.setBounds(590, 257, 170, 153);
+		contentPane.add(l4_1);
+		l4_1.setVisible(false);
+		
+		JLabel l1 = new JLabel("");
+		l1.setIcon(new ImageIcon("C:\\Users\\pc\\Documents\\question-mark_195186-5650.jpg"));
+		l1.setBounds(10, 257, 170, 153);
+		contentPane.add(l1);
+		
+		JLabel l2 = new JLabel("");
+		l2.setIcon(new ImageIcon("C:\\Users\\pc\\Documents\\question-mark_195186-5650.jpg"));
+		l2.setBounds(203, 257, 170, 153);
+		contentPane.add(l2);
+		
+		JLabel l3 = new JLabel("");
+		l3.setIcon(new ImageIcon("C:\\Users\\pc\\Documents\\question-mark_195186-5650.jpg"));
+		l3.setBounds(400, 257, 170, 153);
+		contentPane.add(l3);
+		
+		JLabel l4 = new JLabel("");
+		l4.setIcon(new ImageIcon("C:\\Users\\pc\\Documents\\question-mark_195186-5650.jpg"));
+		l4.setBounds(590, 257, 170, 153);
+		contentPane.add(l4);
+		
+		JLabel lblNewLabel_4 = new JLabel("\u041D\u0430\u043F\u0438\u0448\u0438 \u0442\u0430\u0439\u043D\u0430\u0442\u0430 \u0434\u0443\u043C\u0430 \u0441\u0432\u044A\u0440\u0437\u0432\u0430\u043D\u0430 \u0441 \u043F\u0440\u043E\u043B\u0435\u0442\u0442\u0430, \u0437\u0430 \u0434\u0430 \u0441\u0435 \u043F\u043E\u043A\u0430\u0436\u0435 \u0441\u043D\u0438\u043C\u043A\u0430");
+		lblNewLabel_4.setForeground(new Color(240, 248, 255));
+		lblNewLabel_4.setBackground(new Color(240, 255, 255));
+		lblNewLabel_4.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_4.setBounds(36, 42, 724, 89);
+		contentPane.add(lblNewLabel_4);
+		
+		t1 = new JTextField();
+		t1.setFont(new Font("Trebuchet MS", Font.PLAIN, 18));
+		t1.setHorizontalAlignment(SwingConstants.CENTER);
+		t1.setBounds(259, 126, 260, 53);
+		contentPane.add(t1);
+		t1.setColumns(10);
+		
+		JButton btnNewButton = new JButton("\u041F\u0440\u043E\u0432\u0435\u0440\u0438");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String t="цвете";
+				String tt="великден";
+				String ttt="пеперуда";
+				String tttt="градинарство";
+			if (t1.equals(t))l1_1.setVisible(true);
+			if (t1.equals(tt))l2_1.setVisible(true);
+			if (t1.equals(ttt))l3_1.setVisible(true);
+			if (t1.equals(tttt))l4_1.setVisible(true);
+			
+			
+		}});
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(60, 179, 113));
+		btnNewButton.setBounds(295, 190, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("\u0418\u0437\u0447\u0438\u0441\u0442\u0438");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				t1.setText("");
+				l1_1.setVisible(false);
+				l2_1.setVisible(false);
+				l3_1.setVisible(false);
+				l4_1.setVisible(false);
+			}
+		});
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setBackground(new Color(60, 179, 113));
+		btnNewButton_1.setBounds(401, 190, 89, 23);
+		contentPane.add(btnNewButton_1);
+		
+		
+	}
+}
