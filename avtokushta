@@ -1,0 +1,322 @@
+package yes;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.border.EtchedBorder;
+import java.awt.Color;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.border.TitledBorder;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
+
+public class avtokushta extends JFrame {
+
+	private JPanel contentPane;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					avtokushta frame = new avtokushta();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public avtokushta() {
+		setTitle("\u0410\u0432\u0442\u043E\u043A\u044A\u0449\u0430 \"\u0410\u0432\u0442\u043E\u043C\u043E\u043D\u0442\u044C\u043E\u0440\"");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 486, 618);
+		contentPane = new JPanel();
+		contentPane.setForeground(new Color(192, 192, 192));
+		contentPane.setBackground(new Color(0, 139, 139));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("\u0410\u0432\u0442\u043E\u043A\u044A\u0449\u0430");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setToolTipText("");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 37));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(91, 0, 287, 38);
+		contentPane.add(lblNewLabel);
+		
+		JComboBox cb1 = new JComboBox();
+		cb1.setBackground(new Color(72, 209, 204));
+		cb1.setForeground(new Color(255, 255, 255));
+		cb1.setModel(new DefaultComboBoxModel(new String[] {"BMW", "Mercedes", "Nissan", "Ford", "Chevrolet", "Audi", "TOYOTA", "Honda"}));
+		cb1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		cb1.setBounds(310, 118, 150, 22);
+		contentPane.add(cb1);
+		
+		JLabel lblNewLabel_2 = new JLabel("\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043C\u0430\u0440\u043A\u0430:");
+		lblNewLabel_2.setBackground(SystemColor.window);
+		lblNewLabel_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2.setBounds(10, 118, 249, 22);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0446\u0432\u044F\u0442:");
+		lblNewLabel_2_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2_1.setBounds(10, 170, 249, 22);
+		contentPane.add(lblNewLabel_2_1);
+		
+		JComboBox cb2 = new JComboBox();
+		cb2.setBackground(new Color(72, 209, 204));
+		cb2.setForeground(new Color(255, 255, 255));
+		cb2.setModel(new DefaultComboBoxModel(new String[] {"\u0421\u0438\u0432", "\u0411\u044F\u043B", "\u0427\u0435\u0440\u0435\u043D", "\u0421\u0438\u043D", "\u0417\u0435\u043B\u0435\u043D", "\u0427\u0435\u0440\u0432\u0435\u043D"}));
+		cb2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		cb2.setBounds(310, 170, 150, 22);
+		contentPane.add(cb2);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0, 139, 139));
+		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0414\u043E\u043F\u044A\u043B\u043D\u0438\u0442\u0435\u043B\u0435\u043D \u0442\u0443\u043D\u0438\u043D\u0433", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(255, 255, 255)));
+		panel.setBounds(10, 272, 206, 94);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JRadioButton r1 = new JRadioButton("\u0414\u0430");
+		r1.setBackground(new Color(0, 139, 139));
+		r1.setForeground(new Color(255, 255, 255));
+		buttonGroup.add(r1);
+		r1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		r1.setBounds(36, 37, 50, 23);
+		panel.add(r1);
+		
+		JRadioButton r2 = new JRadioButton("\u041D\u0435");
+		r2.setBackground(new Color(0, 139, 139));
+		r2.setForeground(new Color(255, 255, 255));
+		buttonGroup.add(r2);
+		r2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		r2.setBounds(120, 37, 50, 23);
+		panel.add(r2);
+		
+		JLabel lblNewLabel_2_1_1 = new JLabel("\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0438\u043D\u0442\u0435\u0440\u0438\u043E\u0440:");
+		lblNewLabel_2_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2_1_1.setBounds(10, 223, 249, 22);
+		contentPane.add(lblNewLabel_2_1_1);
+		
+		JComboBox cb3 = new JComboBox();
+		cb3.setBackground(new Color(72, 209, 204));
+		cb3.setForeground(new Color(255, 255, 255));
+		cb3.setModel(new DefaultComboBoxModel(new String[] {"\u0427\u0435\u0440\u0435\u043D", "\u0411\u044F\u043B", "\u0421\u0438\u0432"}));
+		cb3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		cb3.setBounds(310, 223, 150, 22);
+		contentPane.add(cb3);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(0, 139, 139));
+		panel_1.setLayout(null);
+		panel_1.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0412\u0438\u0434 \u0433\u0443\u043C\u0438", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(255, 255, 255)));
+		panel_1.setBounds(254, 272, 206, 94);
+		contentPane.add(panel_1);
+		
+		JRadioButton rr1 = new JRadioButton("\u041B\u0435\u0442\u043D\u0438");
+		rr1.setBackground(new Color(0, 139, 139));
+		rr1.setForeground(new Color(255, 255, 255));
+		rr1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		rr1.setBounds(22, 37, 82, 23);
+		panel_1.add(rr1);
+		
+		JRadioButton rr2 = new JRadioButton("\u0417\u0438\u043C\u043D\u0438");
+		rr2.setBackground(new Color(0, 139, 139));
+		rr2.setForeground(new Color(255, 255, 255));
+		rr2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		rr2.setBounds(106, 37, 80, 23);
+		panel_1.add(rr2);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(new Color(0, 139, 139));
+		panel_2.setLayout(null);
+		panel_2.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0412\u0430\u0448\u0430\u0442\u0430 \u043F\u043E\u0440\u044A\u0447\u043A\u0430", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(255, 255, 255)));
+		panel_2.setBounds(10, 377, 206, 191);
+		contentPane.add(panel_2);
+		
+		JLabel lblNewLabel_2_2 = new JLabel("M\u0430\u0440\u043A\u0430:");
+		lblNewLabel_2_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2_2.setBounds(10, 22, 82, 22);
+		panel_2.add(lblNewLabel_2_2);
+		
+		JLabel lblNewLabel_2_2_1 = new JLabel("\u0426\u0432\u044F\u0442:");
+		lblNewLabel_2_2_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_2_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2_2_1.setBounds(10, 55, 82, 22);
+		panel_2.add(lblNewLabel_2_2_1);
+		
+		JLabel lblNewLabel_2_2_2 = new JLabel("\u0418\u043D\u0442\u0435\u0440\u0438\u043E\u0440:");
+		lblNewLabel_2_2_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_2_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2_2_2.setBounds(9, 88, 95, 22);
+		panel_2.add(lblNewLabel_2_2_2);
+		
+		JLabel l1 = new JLabel("");
+		l1.setForeground(new Color(255, 255, 255));
+		l1.setHorizontalAlignment(SwingConstants.TRAILING);
+		l1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		l1.setBounds(80, 22, 116, 22);
+		panel_2.add(l1);
+		
+		JLabel l2 = new JLabel("");
+		l2.setForeground(new Color(255, 255, 255));
+		l2.setHorizontalAlignment(SwingConstants.TRAILING);
+		l2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		l2.setBounds(114, 55, 82, 22);
+		panel_2.add(l2);
+		
+		JLabel l3 = new JLabel("");
+		l3.setForeground(new Color(255, 255, 255));
+		l3.setHorizontalAlignment(SwingConstants.TRAILING);
+		l3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		l3.setBounds(114, 88, 82, 22);
+		panel_2.add(l3);
+		
+		JLabel lblNewLabel_2_2_2_1 = new JLabel("\u0422\u0443\u043D\u0438\u043D\u0433:");
+		lblNewLabel_2_2_2_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_2_2_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2_2_2_1.setBounds(10, 121, 95, 22);
+		panel_2.add(lblNewLabel_2_2_2_1);
+		
+		JLabel l4 = new JLabel("");
+		l4.setForeground(new Color(255, 255, 255));
+		l4.setHorizontalAlignment(SwingConstants.TRAILING);
+		l4.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		l4.setBounds(114, 121, 82, 22);
+		panel_2.add(l4);
+		
+		JLabel lblNewLabel_2_2_2_1_1 = new JLabel("\u0412\u0438\u0434 \u0433\u0443\u043C\u0438:");
+		lblNewLabel_2_2_2_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_2_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2_2_2_1_1.setBounds(10, 154, 95, 22);
+		panel_2.add(lblNewLabel_2_2_2_1_1);
+		
+		JLabel l5 = new JLabel("");
+		l5.setForeground(new Color(255, 255, 255));
+		l5.setHorizontalAlignment(SwingConstants.TRAILING);
+		l5.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		l5.setBounds(101, 154, 95, 22);
+		panel_2.add(l5);
+		
+		JPanel panel_2_1 = new JPanel();
+		panel_2_1.setBackground(new Color(0, 139, 139));
+		panel_2_1.setLayout(null);
+		panel_2_1.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0426\u0435\u043D\u0430", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(255, 255, 255)));
+		panel_2_1.setBounds(254, 377, 206, 133);
+		contentPane.add(panel_2_1);
+		
+		JLabel cena1 = new JLabel("");
+		cena1.setForeground(new Color(255, 255, 255));
+		cena1.setToolTipText("");
+		cena1.setHorizontalAlignment(SwingConstants.CENTER);
+		cena1.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		cena1.setBounds(10, 46, 186, 38);
+		panel_2_1.add(cena1);
+		
+		JLabel cena2 = new JLabel("");
+		cena2.setForeground(new Color(255, 255, 255));
+		cena2.setToolTipText("");
+		cena2.setHorizontalAlignment(SwingConstants.CENTER);
+		cena2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		cena2.setBounds(10, 84, 186, 38);
+		panel_2_1.add(cena2);
+		
+		JButton btnNewButton = new JButton("\u041F\u043E\u0440\u044A\u0447\u0430\u0439");
+		btnNewButton.setBackground(new Color(0, 191, 255));
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String marka=cb1.getSelectedItem().toString();
+				l1.setText(marka);
+				String cvqt=cb2.getSelectedItem().toString();
+				l2.setText(cvqt);
+				String interior=cb3.getSelectedItem().toString();
+				l3.setText(interior);
+				String tuning="";
+			    if (r1.isSelected())tuning="Да";
+			    else tuning="Не";
+			    l4.setText(tuning);
+			    String gumi="";
+			    if (rr1.isSelected())gumi="Летни";
+			    if (rr2.isSelected())gumi="Зимни";
+			    if (!rr1.isSelected()&&!rr2.isSelected())gumi="Без предпрочитание";
+                l5.setText(gumi);
+			    
+			    double cenaa=0;
+			    if (marka=="BMW")cenaa=9599.99;
+			    if (marka=="Mercedes")cenaa=8999.99;
+			    if (marka=="Chevrolet")cenaa=7299.99;
+			    if (marka=="Nissan")cenaa=6799.99;
+			    if (marka=="Audi")cenaa=9199.99;
+			    if (marka=="TOYOTA")cenaa=5699.99;
+			    if (marka=="Honda")cenaa=5199.99;
+			    
+			    if (interior=="Бял")cenaa+=200;
+			    if (interior=="Сив")cenaa+=100;
+			    
+			    if (cvqt=="Червен") {cenaa=cenaa-0.1*cenaa;
+			    cena2.setText("-10% червен цвят");
+			    
+			    }
+			    String cena=Double.toString(cenaa);
+			    cena1.setText(cena+" лв.");
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnNewButton.setBounds(254, 521, 99, 47);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("\u0418\u0437\u0447\u0438\u0441\u0442\u0438");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				l1.setText("");
+				l2.setText("");
+				l3.setText("");
+				l4.setText("");
+				l5.setText("");
+				cena1.setText("");
+				cena2.setText("");
+				
+			}
+		});
+		btnNewButton_1.setBackground(new Color(0, 191, 255));
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnNewButton_1.setBounds(360, 521, 100, 47);
+		contentPane.add(btnNewButton_1);
+		
+		
+		JLabel lblNewLabel_1 = new JLabel("\"\u0410\u0432\u0442\u043E\u043C\u043E\u043D\u0442\u044C\u043E\u0440\"");
+		lblNewLabel_1.setBounds(112, 39, 249, 45);
+		contentPane.add(lblNewLabel_1);
+		lblNewLabel_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1.setToolTipText("");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 37));
+	}
+}
