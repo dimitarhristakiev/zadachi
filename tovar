@@ -1,0 +1,57 @@
+package adada;
+import java.util.Scanner;
+public class tovar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+
+int broi=sc.nextInt();
+double tovar;
+double tovarobshto=0;
+double mikrobus=0;
+double kamion=0;
+double vlak=0;
+double mp=0;
+double kp=0;
+double vp=0;
+
+double cena=0;
+double avg=0;
+
+if (broi>0&&broi<=1000) {
+	for (int i=0;i<broi;i++) {
+		tovar=sc.nextDouble();tovarobshto=tovarobshto+tovar;
+		if (tovar<1&&tovar>1000)System.out.println("Невалиден товар!");
+		else {if (tovar<=3) {
+			mikrobus=mikrobus+tovar;
+			mp=(mikrobus/tovarobshto)*100;
+		}
+		else {if (tovar>3&&tovar<=11) {
+			kamion=kamion+tovar;
+			kp=(kamion/tovarobshto)*100;
+		}
+		else {if (tovar>11) {
+			vlak=vlak+tovar;
+			vp=(vlak/tovarobshto)*100;
+		}
+	
+		
+	}
+}
+		cena=mikrobus*200+kamion*175+vlak*120;
+		avg=cena/tovarobshto;
+	}
+}
+}
+else System.out.println("Невалиден брой!");
+System.out.println(avg);
+System.out.println(mp+"%");
+System.out.println(kp+"%");
+System.out.println(mp+"%");
+System.out.println(mikrobus);
+System.out.println(kamion);
+System.out.println(vlak);
+	}
+
+}
