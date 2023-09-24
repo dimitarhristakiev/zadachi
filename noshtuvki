@@ -1,0 +1,61 @@
+package adada;
+import java.util.Scanner;
+public class noshtuvki {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc= new Scanner(System.in);
+System.out.print("Month: ");
+String month=sc.nextLine();
+
+System.out.print("Nights stay: ");
+int nights=sc.nextInt();
+double studio=0;
+double apartament=0;
+
+if (month.equalsIgnoreCase("May")||month.equalsIgnoreCase("June")||month.equalsIgnoreCase("July")||month.equalsIgnoreCase("August")||month.equalsIgnoreCase("September")||month.equalsIgnoreCase("October")) {
+	
+
+	   if (nights>0&&nights<=200) {
+if (month.equalsIgnoreCase("May")||month.equalsIgnoreCase("October")) {
+	studio=50;
+	apartament=65;
+	if (nights>7) {
+		studio=studio-5/100*studio;
+		
+	}
+	if (nights>14) {
+		studio=studio-30/100*studio;
+		apartament=apartament-10/100*apartament;
+	}
+}
+else if (month.equalsIgnoreCase("June")||month.equalsIgnoreCase("September")) {
+	studio=75.20;
+	apartament=68.70;
+	if (nights>14) {
+		studio=studio-20/100*studio;
+		apartament=apartament-10/100*apartament;
+	}
+}
+else if (month.equalsIgnoreCase("July")||month.equalsIgnoreCase("August")) {
+	studio=76;
+	apartament=77;
+	if (nights>14) {
+		apartament=apartament-10/100*apartament;
+	}
+}
+	   }
+	   
+	   else System.out.println("Please select a stay period of 1 to 200 nights!");
+	}
+	else System.out.println("Please select a month from May to October!");
+
+studio=studio*nights;
+apartament=apartament*nights;
+System.out.println("Apartament: "+apartament+" lv.");
+System.out.println("Studio: "+studio+" lv.");
+
+		}
+
+	}
+
